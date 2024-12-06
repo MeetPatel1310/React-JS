@@ -1,0 +1,24 @@
+
+
+.home{
+    width: 100vw;
+    height: 100vh;
+    background-color: #454545;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home .para{
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+}
+.para span{
+    font-size: 1.4rem;
+}
+.home button{
+    display: block;
+
+}
