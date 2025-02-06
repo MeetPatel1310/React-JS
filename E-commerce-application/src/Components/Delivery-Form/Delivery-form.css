@@ -1,0 +1,197 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.userInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 30px;
+    color: #333;
+    height: 100vh;
+    background: linear-gradient(135deg, #06af82, #00d39e, #a3f7bf);
+}
+.invoiceContainer{
+    border: 1px solid black;
+    padding: 10px;
+}
+.invoicePage{
+    min-width: 40vw;
+    height: 85vh;
+    background-color: white;
+    padding: 10px;
+}
+.companyInfo{
+    display: flex;
+    /* column-gap: 80px; */
+    padding-top: 5px;
+}
+.companyInfo img{
+    margin-right: 20px;
+}
+.companyInfo .companyDetails{
+    margin-right: 220px;
+}
+
+.companyInfo div p{
+    font-size: 0.8rem;
+    line-height: 10px;
+    /* margin-bottom: 0px; */
+
+}
+/* .invoiceitem p{
+    font-size: 0.8rem;
+    line-height: 10px;
+} */
+.companylogo p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.companyInfo img{
+    display: inline;
+}
+.companyInfo p{
+    display: inline;
+}
+.billingInfo p{ 
+    margin-bottom: 0px;
+}
+.billingInfo{
+    display: flex;
+    padding: 0px 20px;
+    /* gap: 80px; */
+
+}
+.userId,.userDetails{
+    width: 300px;
+   
+}
+
+.userDetails p{
+    width: 300px; /* Set a width for wrapping */
+    word-wrap: break-word; 
+}
+.deliveryAddress{
+    display: inline;
+}
+
+.billingInfo  p {
+    /* display: inline-block; */
+    word-break: break-word; 
+}
+.invoiceData{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.invoiceData table{
+    width: 90%;
+    text-align: center;
+    font-size: medium;
+}
+.invoiceData table tr td{
+    max-width: 130px;
+    word-break: break-word;
+}
+.invoiceData table tr{
+    height: 40px;
+}
+
+.compliment{
+    color: green;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+.delivery-form{
+    /* min-width: 30vw; */
+    padding: 10px;
+    /* row-gap: 20px; */
+    border: 1px solid blue;
+    background: linear-gradient(to bottom right, #ffffff, #f7f7f7);
+    padding: 20px;
+    box-shadow: 5px 5px 5px gray;
+}
+.delivery-form input{
+    display: block;
+    width: 400px;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.delivery-form input::placeholder{
+    text-align: center;
+
+}
+.D-form-invalid{
+    color: red;
+
+}
+
+#submit-btn{
+    width: 400px;
+}
+
+/* popup box  */
+/* Center the content */
+.App {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Popup Overlay */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Above other content */
+  }
+  
+  /* Popup Box */
+  .popup-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add animation for the popup */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

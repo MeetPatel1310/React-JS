@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+    
+}
+/* body{
+    padding-top: 60px;
+} */
+
+.nav-item{
+    padding-right: 50px;
+}
+.nav-link{
+    color: black;
+    
+}
+/* for changes on bootsraps' properties */
+/* .navbar-nav .nav-link.active, .nav-link{ 
+    color: black;
+} */
+.navbar{
+    padding: 0;
+    position: fixed !important;
+    width: 100vw;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+
+    top: 0px; /* Stick to the top when scrolling */
+    z-index: 1030;
+    
+}
+.navbar-default {
+    background-color: white;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+.navbar-scrolled {
+    background-color: #d0f0e7;
+    color: white !important;
+    transition: background-color 0.3s ease;
+}
+.nav-item:hover {
+    
+    border-bottom: 2px solid #5fcbae; /* Line below the active item */
+    font-weight: bold; /* Optional: Make active item bold */
+}
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 0;
+    align-items: center;
+}
+
+#nav img{
+    width: 50px;
+    margin-left: 50px;
+}
+
+/* nav{
+    
+    position: fixed ;
+    bottom: 0;
+    right: 0;
+    
+    
+} */
+.Logout-btn{
+  all: unset; /* Removes all default styles */
+  background: none; /* Optional: Remove background */
+  border: none; /* Optional: Remove border */
+  padding: 0; /* Optional: Remove padding */
+  font: inherit; /* Optional: Inherit font styles */
+
+}
+
+/* About popup model  */
+/* Basic modal styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 80%;
+    position: relative;
+  }
+  
+  .popup header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .popup header h1 {
+    margin: 0;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: red;
+  }
+  

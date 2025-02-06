@@ -1,0 +1,57 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.cart-page{
+    
+    display: flex;
+    justify-content: center;
+
+}
+.cart-data{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.cart-data table{
+    width: 70vw;
+    text-align: center;
+    font-size: x-large;
+}
+.cart-data table tr td{
+    max-width: 130px;
+    word-break: break-word;
+}
+.cart-data table tr{
+    height: 100px;
+}
+tbody tr td img{
+    width: 70px;
+}
+.cart-btn {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the parent */
+  }
+  
+  /* If you want to style the button inside the Link component */
+.cart-btn button {
+    all: unset;
+    font-size: 0.9rem;
+    background-color: #06af82;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 100px;
+}
+.cart-btn-container{
+    display: flex;
+    gap: 500px;
+}
