@@ -31,7 +31,8 @@ const Home = () => {
     setRotator("#ffa500");
   }
   function handleBlue() {
-    setTheme("blue-500"); 
+    setTheme("blue-500");
+    setRotator("#3B82F6"); 
   }
   function handleRed() {
     setTheme("red-500"); // Update to green
@@ -102,7 +103,7 @@ const Home = () => {
         </div>
       </div> */}
 
-      <div className="flex flex-col gap-2 items-center  absolute left-0 pl-11 top-10">
+      <div className="flex flex-col gap-2 items-center  absolute left-0 md:pl-11 pl-2 md:top-10 top-5" >
         {/* Transition Color Plate Menu */}
         <div className="w-11 h-[2.25rem] flex items-center ">
           <img onClick = {handleColorTheme} className="w-10 h-[2.25rem]" src={colorWheel} alt="color-plate"/>
@@ -134,25 +135,25 @@ const Home = () => {
 
       <motion.div
         ref={ref}
-        className="p-5 rounded-lg mb-10"
+        className="p-5 rounded-lg mb-10 overflow-hidden"
         initial={{ opacity: 0, y: -100 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
         transition={{ duration: 1 }}
       >
-        <div className="text-white w-full md:flex md:flex-row justify-evenly items-center p-8 md:p-20 gap-5 flex flex-col">
+        <div className="text-white w-full md:flex md:flex-row justify-evenly items-center p-8 md:p-20 gap-8 flex flex-col">
           <div className="content flex flex-col w-full md:w-1/2 gap-5 pt-5 order-2 md:order-1  ">
             <TypeAnimation
               sequence={[
                 "Welcome Here!",
                 1000,
-                "I am a Meet Patel",
+                "I'm Meet Patel",
                 1000,
                 "A Frontend Developer & Programmer.",
                 1000,
               ]}
               wrapper="span"
-              speed={50}
-              className={`typedClass text-[2em] inline-block`}
+              speed={20}
+              className={`typedClass text-[2em] inline-block `}
               // style={{
               //   fontSize: "2em",
               //   display: "inline-block",
@@ -182,7 +183,7 @@ const Home = () => {
           </div>
 
           {/* Rotating border */}
-          <div className="rotating-border order-2">
+          <div className="rotating-border order-1">
             <img
               src={img1}
               alt="Profile"

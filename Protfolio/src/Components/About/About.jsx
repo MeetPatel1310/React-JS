@@ -39,7 +39,7 @@ const About = (props) => {
     window.open('https://github.com/MeetPatel1310', '_blank');
   }
   return (
-    <div className="px-11 bg-slate-700  h-2/3 text-slate-100 py-5  mx-8 flex flex-col">
+    <div className="lg:px-11 md:px-7 px-3 bg-slate-700  h-2/3 text-slate-100 py-5 overflow-hidden  md:mx-8 mx-2 flex flex-col">
       <h1 className="w-20 text-white custom-double-underline text-3xl font-bold ">
         About
       </h1>
@@ -96,31 +96,31 @@ const About = (props) => {
             Excellent problem-solving skills Effective communicator and
             collaborator
           </p> */}
-          <div className="px-3 my-5 flex justify-around">
-            <div className="flex flex-col w-[45%] gap-4 items-center">
-              <div className="flex w-[90%] justify-between">
-                <div className="left flex flex-col  gap-1 ">
+          <div className="md:px-3 px-2 my-5 lg:flex lg:flex-row flex flex-col items-center gap-5 lg:gap-0  lg:justify-around">
+            <div className=" md:gap-3 lg:w-[45%] flex flex-col gap-3 lg:items-center">
+              <div className="md:flex md:flex-row flex-col sm:gap-0  w-[90%] md:justify-between">
+                <div className="left flex flex-col md:gap-1 gap-2 ">
                   <div className="birth flex gap-2 ">
-                    <h2 className="text-lg">Birth : </h2>
+                    <h2 className="text-lg">Birth: </h2>
                     <p className="text-lg">13/10/2001</p>
                   </div>
                   <div className="Degree flex text-lg gap-2">
-                    <h2>Degree :</h2>
+                    <h2>Degree:</h2>
                     <p>BE</p>
                   </div>
 
                   <div className="Phone flex text-lg gap-2">
-                    <h2>Phone :</h2>
-                    <p> 76218 20722</p>
+                    <h2>Phone:</h2>
+                    <p> 76218-20722</p>
                   </div>
                 </div>
-                <div className="right flex flex-col gap-1 ">
+                <div className="right flex flex-col md:gap-1 gap-2 ">
                   <div className="email flex text-lg gap-2">
                     <h2>Email:</h2>
                     <p>meetpatel2877@gmail.com</p>
                   </div>
                   <div className="GitHub flex text-lg gap-2">
-                    <h2>Github :</h2>
+                    <h2>Github:</h2>
                     <p onClick={handleGithubLink} style={{color:"#1E90FF"}} className="cursor-pointer">https://github.com/MeetPatel1310</p>
                   </div>
 
@@ -134,8 +134,8 @@ const About = (props) => {
                     </div> */}
                 </div>
               </div>
-              <hr className="w-[90%] mx-auto" style={{ borderColor: props.colorTheme }} />
-              <div className="Skill w-[90%] ">
+              <hr className="lg:w-[90%] md:w-[0%] w-[90%] mx-auto" style={{ borderColor: props.colorTheme }} />
+              <div className=" Skill w-[90%] ">
                 <h2 className="text-lg ">
                   <span className="text-xl font-medium" style={{ color: props.colorTheme }}>Skills :</span> HTML &
                   CSS, Javascript, ReactJS, NodeJS, ExpressJS, Redux,
@@ -144,7 +144,8 @@ const About = (props) => {
                 </h2>
               </div>
             </div>
-            <div className="w-[55%] flex flex-col items-center  justify-center">
+            <hr className="lg:w-[0%] w-[90%] lg:mt-0  text-center" style={{ borderColor: props.colorTheme }} />
+            <div className="lg:w-[55%] w-[95%]  lg:py-0 lg:flex lg:flex-col lg:items-center  lg:justify-center">
               {/* <div class="w-[90%] flex items-center space-x-4">
                 <h2 class="text-white text-lg font-medium whitespace-nowrap my-2">
                   HTML & CSS:
@@ -188,7 +189,7 @@ const About = (props) => {
           <h2 className="themeTextColor text-2xl mt-5 mb-2 text-justify">
             Professional Experience
           </h2>
-          <p className="text-justify md:text-lg">
+          <p className="text-justify text-lg">
             [Job Title], [Company/Organization], [Dates] [Brief description of
             responsibilities and achievements] [Job Title],
             [Company/Organization], [Dates] [Brief description of
@@ -202,7 +203,7 @@ const About = (props) => {
           <h2 className="themeTextColor text-2xl mt-5 mb-2 text-justify">
             Mission Statement
           </h2>
-          <p className="text-justify md:text-lg">
+          <p className="text-justify text-lg">
             My mission is to leverage my skills and creativity to deliver
             innovative [Your Field] solutions that exceed client expectations
             and contribute positively to the digital landscape. I am committed

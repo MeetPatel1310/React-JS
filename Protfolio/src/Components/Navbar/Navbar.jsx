@@ -33,7 +33,7 @@ const Navbar = (props) => {
     <div>
       <nav className="flex justify-between items-center h-12 bg-slate-900 text-white px-10 fixed top-0 left-0 right-0  z-10" style={{ boxShadow: `0 0.5px 20px 0 ${props.navTheme}` }}>
         <div className="font-bold text-xl" style={{color:`${props.navTheme}`}}>Portfolio</div>
-        <ul className="hidden md:flex justify-between items-center md:gap-12 pr-10 h-full">
+        <ul className="hidden md:flex justify-between items-center md:gap-12 pr-8 h-full ">
           <Link to="#" onClick={() => handleScroll("about")}>
             <li
               className={` nav-item cursor-pointer   hover:scale-105 duration-500 w-1/4 text-center`}
@@ -68,7 +68,7 @@ const Navbar = (props) => {
           onClick={() => {
             setMenuOpen(!menuOpen);
           }}
-          className="menu-icon md:hidden "
+          className="menu-icon md:hidden absolute right-4 pr-1 hover:animate-none focus:animate-none "
         >
           <i class="bi bi-justify"></i>
         </button>

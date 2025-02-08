@@ -7,7 +7,7 @@ import { IoLogoLinkedin } from "react-icons/io";
 
 const Contact = (props) => {
   return (
-    <div className="bg-slate-700 text-white mt-20 mx-6 px-10 py-5 h-full flex flex-col">
+    <div className="bg-slate-700 text-white mt-20 xl:mx-8 mx-3 md-3 xl:px-10 px-6 h-full flex flex-col">
       <h1 className="font-bold text-3xl py-4" style={{color:`${props.colorTheme}`}}>Contact Me</h1>
       <p className="text-lg py-2">
         Please fill out the form below to contact me

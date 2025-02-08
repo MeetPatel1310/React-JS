@@ -68,7 +68,7 @@ const Experiance = (props) => {
     },
   ];
   return (
-    <div className="text-white mt-20 mx-10 px-7 h-full flex flex-col">
+    <div className="text-white mt-20 xl:mx-8 mx-3 md-3 xl:px-10 px-6 h-full flex flex-col">
       <h1 className="custom-double-underline  w-20 pb-2 font-bold text-3xl my-4">
         Experiance
       </h1>
