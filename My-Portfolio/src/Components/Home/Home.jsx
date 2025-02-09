@@ -3,7 +3,7 @@ import img1 from "../../assets/Img/User-img.png";
 import { TypeAnimation } from "react-type-animation";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { IoLogoFacebook, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
-
+import { MdPermContactCalendar } from "react-icons/md";
 import Portfolio from "../Portfolio_Section/Portfolio";
 import Experiance from "../Experiance/Experiance";
 import Contact from "../Contact/Contact";
@@ -32,7 +32,7 @@ const Home = () => {
   }
   function handleBlue() {
     setTheme("blue-500");
-    setRotator("#3B82F6"); 
+    setRotator("#3B82F6");
   }
   function handleRed() {
     setTheme("red-500"); // Update to green
@@ -84,12 +84,38 @@ const Home = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
+
+  const myDetails=[
+    {
+      id: 1,
+      h2field: "Contact me",
+      h3field: "+91 76218 20722"
+    },
+    {
+      id: 2,
+      h2field: "Email I'D",
+      h3field: "meetpatel2877@gmail.com"
+    },
+    {
+      id: 3,
+      h2field: "Git-hub Link",
+      h3field: "+91 76218 20722"
+    },
+    {
+      id:4,
+      h2field: "Location",
+      h3field: "Kalol, Gandhinagar"
+    },
+  ]
 
   return (
-    <div className="mt-12 bg-slate-800 relative">
+    <div className="mt-10 bg-slate-800 relative">
       <Navbar navTheme={rotatorTheme} />
-      {/* <div className="flex gap-2 items-center  absolute right-0 pl-11 top-5 ">
+      {/* <div className="flex gap-2 items-center mt-4 absolute left-0 pl-11 top-8 ">
+        <div className="w-11 h-[2.25rem] flex items-center mr-5">
+           <img onClick={handleColorTheme}  className="w-10 h-[2.25rem]" src={colorWheel} alt="color-plate"/>
+        </div>
         <div className={`${isOpenColorPlate ? "block" : "hidden"}  selectTheamMenu w-[15.75rem] h-[2.25rem] px-2 border border-white-600 rounded-lg  flex justify-between items-center shadow-[0_4px_6px_0] transition-transform duration-2000 ease-in-out 
         transform ${isOpenColorPlate ? "translate-y-0" : "translate--full"
         }`} >
@@ -98,17 +124,26 @@ const Home = () => {
           <div onClick={handleBlue} className="w-5 h-5  bg-blue-600 rounded-full cursor-pointer "></div>
           <div onClick={handleRed} className="w-5 h-5  bg-red-600 rounded-full cursor-pointer "></div>
         </div>
-        <div className="w-11 h-[2.25rem] flex items-center mr-5">
-           <img onClick={handleColorTheme}  className="w-10 h-[2.25rem]" src={colorWheel} alt="color-plate"/>
-        </div>
+        
       </div> */}
 
-      <div className="flex flex-col gap-2 items-center  absolute left-0 md:pl-11 pl-2 md:top-10 top-5" >
-        {/* Transition Color Plate Menu */}
+      <div className="flex flex-col gap-2 items-center  absolute left-0 lg:pl-11 md:pl-4 sm:pl-[40px] pl-1 md:top-10 top-8">
+        
         <div className="w-11 h-[2.25rem] flex items-center ">
-          <img onClick = {handleColorTheme} className="w-10 h-[2.25rem]" src={colorWheel} alt="color-plate"/>
+          <img
+            onClick={handleColorTheme}
+            className="w-10 h-[2.25rem]"
+            src={colorWheel}
+            alt="color-plate"
+          />
         </div>
-        <div className={`${isOpenColorPlate ? "block" : "hidden"} selectTheamMenu w-[2.25rem] h-[10.75rem] p-2 border border-white-600 rounded-lg flex flex-col justify-between items-center shadow-[0_4px_6px_0] transition-transform duration-1500 ease-in-out transform  ${isOpenColorPlate ? "translate-y-0" : "-translate-y-full"}`} >
+        <div
+          className={`${
+            isOpenColorPlate ? "block" : "hidden"
+          } selectTheamMenu w-[2.25rem] h-[10.75rem] p-2 border border-white-600 rounded-lg flex flex-col justify-between items-center shadow-[0_4px_6px_0] transition-transform duration-1500 ease-in-out transform  ${
+            isOpenColorPlate ? "translate-y-0" : "-translate-y-full"
+          }`}
+        >
           <div
             onClick={handleOrange}
             className="w-5 h-5 bg-[#ffa500] rounded-full cursor-pointer mb-2"
@@ -127,9 +162,6 @@ const Home = () => {
           ></div>
         </div>
 
-        {/* Color Picker Icon */}
-
-        
         
       </div>
 
@@ -140,7 +172,7 @@ const Home = () => {
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -100 }}
         transition={{ duration: 1 }}
       >
-        <div className="text-white w-full md:flex md:flex-row justify-evenly items-center p-8 md:p-20 gap-8 flex flex-col">
+        <div className="text-white w-full  md:flex md:flex-row justify-evenly items-center p-8 md:p-10 md:mt-10 gap-15 flex flex-col">
           <div className="content flex flex-col w-full md:w-1/2 gap-5 pt-5 order-2 md:order-1  ">
             <TypeAnimation
               sequence={[
@@ -191,6 +223,43 @@ const Home = () => {
             />
           </div>
         </div>
+
+        {/* <div className="container">
+            <div id="contact" className=" flex flex-col justify-center items-center gap-2 w-[250px] h-[200px] border-2 text-yellow-400 border-gray-100">
+              <div className="icon text-[50px]">
+                <MdPermContactCalendar />
+              </div> 
+              <div className="text-center">
+                <h2 className="text-[22px] font-bolder">Contact Me</h2>
+                <h3 className="text-[20px]">76218 20722</h3>
+              </div>
+              
+            </div>
+            
+          </div> */}
+          <div className="myDetail flex flex-wrap gap-10 justify-evenly mt-[5%]">
+
+            {myDetails.map(({h2field, h3field}, id)=>(
+                <div key={id} className="box">
+                <div
+                  id="Mycontact"
+                  style={{color:`${rotatorTheme}`}}
+                  className=" flex flex-col justify-center items-center gap-3   z-20"
+                >
+                  <div className="icon text-[46px]">
+                    <MdPermContactCalendar />
+                  </div>
+                  <div className="text-center text-white">
+                    <h2 className="text-[17px] font-bolder">{h2field}</h2>
+                    <h3 className="text-[17px]">{h3field}</h3>
+                  </div>
+                </div>
+              </div>
+            ))}
+
+          </div>
+          
+        
       </motion.div>
 
       <div id="about">
@@ -235,7 +304,7 @@ const Home = () => {
         </motion.p>
       </div> */}
       <div id="experiance">
-        <Experiance colorTheme={rotatorTheme}/>
+        <Experiance colorTheme={rotatorTheme} />
       </div>
       <div id="contact">
         <Contact colorTheme={rotatorTheme} />
