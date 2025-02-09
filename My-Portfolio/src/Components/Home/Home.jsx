@@ -4,6 +4,9 @@ import { TypeAnimation } from "react-type-animation";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { IoLogoFacebook, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { MdPermContactCalendar } from "react-icons/md";
+import { HiOutlineMail } from "react-icons/hi";
+import { AiFillGithub } from "react-icons/ai";
+import { ImLocation } from "react-icons/im";
 import Portfolio from "../Portfolio_Section/Portfolio";
 import Experiance from "../Experiance/Experiance";
 import Contact from "../Contact/Contact";
@@ -89,25 +92,41 @@ const Home = () => {
   const myDetails=[
     {
       id: 1,
+      icon: <MdPermContactCalendar />,
       h2field: "Contact me",
       h3field: "+91 76218 20722"
     },
     {
       id: 2,
+      icon: <HiOutlineMail />,
       h2field: "Email I'D",
       h3field: "meetpatel2877@gmail.com"
     },
     {
       id: 3,
+      icon: <AiFillGithub />,
       h2field: "Git-hub Link",
-      h3field: "+91 76218 20722"
+      h3field: "https://github.com/MeetPatel1310"
     },
     {
       id:4,
+      icon:<ImLocation />,
       h2field: "Location",
       h3field: "Kalol, Gandhinagar"
     },
   ]
+  function handleBox(params) {
+    if(params==2){
+      window.open('https://mail.google.com/mail/u/0/#all?compose=CllgCJvnrLHVrxVZjpQNsxlMxDbqxLPSrSCXdHjLpzGVwNtMqMPFsjcJcMjGtFFmcLvJcVqwvBV', '_blank');
+    }
+    if(params==3){
+      window.open('https://github.com/MeetPatel1310', '_blank')
+    }
+    if(params==4){
+      window.open('https://www.google.com/maps/place/Kalol,+Gujarat/@23.2241226,72.4454391,12.71z/data=!4m6!3m5!1s0x395c25e6c08bf663:0xff94e46a22aeb386!8m2!3d23.2418194!4d72.4929716!16zL20vMGY1MzB2?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D','_blank')
+    }
+    
+  }
 
   return (
     <div className="mt-10 bg-slate-800 relative">
@@ -237,23 +256,23 @@ const Home = () => {
             </div>
             
           </div> */}
-          <div className="myDetail flex flex-wrap gap-10 justify-evenly mt-[5%]">
+          <div className="myDetail flex flex-wrap gap-10 justify-evenly mt-[5%] ">
 
-            {myDetails.map(({h2field, h3field}, id)=>(
-                <div key={id} className="box">
+            {myDetails.map(({id, icon, h2field, h3field})=>(
+                <div key={id} className="box hover:scale-105 duration-150 cursor-pointer" onClick={()=>handleBox(id)}>
                 <div
                   id="Mycontact"
                   style={{color:`${rotatorTheme}`}}
                   className=" flex flex-col justify-center items-center gap-3   z-20"
                 >
                   <div className="icon text-[46px]">
-                    <MdPermContactCalendar />
+                    {icon}
                   </div>
-                  <div className="text-center text-white">
-                    <h2 className="text-[17px] font-bolder">{h2field}</h2>
-                    <h3 className="text-[17px]">{h3field}</h3>
+                  <div className=" text-center text-white px-[20px]">
+                    <h2 className="text-[17px] font-medium text-white mb-1">{h2field}</h2>
+                    <h3 className={`break-all text-[17px] hover:text-blue-500 duration-150 cursor-pointer text-slate-300`}>{h3field}</h3>
                   </div>
-                </div>
+                </div>     
               </div>
             ))}
 

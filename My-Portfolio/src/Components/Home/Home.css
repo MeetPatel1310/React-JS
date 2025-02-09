@@ -69,7 +69,7 @@
 /* rotating square direction border  */
 .box{
   position: relative;
-  width: 250px;
+  width: 260px;
   height: 180px;
   display: flex;
   justify-content: center;
